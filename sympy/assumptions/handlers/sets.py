@@ -41,10 +41,7 @@ def _IntegerPredicate_number(expr, assumptions):
 def _(expr, assumptions):
     return True
 
-@IntegerPredicate.register_many(Exp1, GoldenRatio, ImaginaryUnit, Infinity,
-        NegativeInfinity, Pi, Rational, TribonacciConstant)
-def _(expr, assumptions):
-    return False
+
 
 @IntegerPredicate.register(Expr)
 def _(expr, assumptions):
