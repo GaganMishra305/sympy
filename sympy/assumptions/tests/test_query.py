@@ -2421,3 +2421,10 @@ def test_issue_27450():
     n = Symbol('n', negative=True, integer=True)
     exp = 2**n
     assert ask(Q.integer(exp)) is False
+
+
+def test_issue_27485():
+    n = Symbol('n', negative=True)
+    p = Symbol('p', positive=True)
+    exp = n**p
+    assert ask(Q.real(exp)) is None 
